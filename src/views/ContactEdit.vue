@@ -28,7 +28,9 @@ export default {
     methods: {
         async getContact(id) {
             try {
+               
                 this.contact = await ContactService.get(id);
+                console.log(this.contact);
             } catch (error) {
         console.log(error);
         // Chuyển sang trang NotFound đồng thời giữ cho URL không đổi
